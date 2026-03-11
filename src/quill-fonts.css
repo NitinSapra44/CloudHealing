@@ -1,0 +1,139 @@
+/* Font dropdown labels */
+.ql-snow .ql-picker.ql-font .ql-picker-label[data-value="roboto"]::before,
+.ql-snow .ql-picker.ql-font .ql-picker-item[data-value="roboto"]::before {
+  content: "Roboto";
+  font-family: 'Roboto', sans-serif;
+}
+
+.ql-snow .ql-picker.ql-font .ql-picker-label[data-value="montserrat"]::before,
+.ql-snow .ql-picker.ql-font .ql-picker-item[data-value="montserrat"]::before {
+  content: "Montserrat";
+  font-family: 'Montserrat', sans-serif;
+}
+
+.ql-snow .ql-picker.ql-font .ql-picker-label[data-value="playfair"]::before,
+.ql-snow .ql-picker.ql-font .ql-picker-item[data-value="playfair"]::before {
+  content: "Playfair";
+  font-family: 'Playfair Display', serif;
+}
+
+/* Editor font classes */
+.ql-font-roboto {
+  font-family: 'Roboto', sans-serif;
+}
+
+.ql-font-montserrat {
+  font-family: 'Montserrat', sans-serif;
+}
+
+.ql-font-playfair {
+  font-family: 'Playfair Display', serif;
+}
+
+/* Font dropdown labels */
+.ql-snow .ql-picker.ql-font .ql-picker-label[data-value="poppins"]::before,
+.ql-snow .ql-picker.ql-font .ql-picker-item[data-value="poppins"]::before {
+  content: "Poppins";
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Editor font class */
+.ql-font-poppins {
+  font-family: 'Poppins', sans-serif;
+}
+
+
+/* Size labels */
+.ql-snow .ql-picker.ql-size .ql-picker-item[data-value="12px"]::before,
+.ql-snow .ql-picker.ql-size .ql-picker-label[data-value="12px"]::before {
+  content: "12px";
+}
+.ql-snow .ql-picker.ql-size .ql-picker-item[data-value="14px"]::before,
+.ql-snow .ql-picker.ql-size .ql-picker-label[data-value="14px"]::before {
+  content: "14px";
+}
+.ql-snow .ql-picker.ql-size .ql-picker-item[data-value="16px"]::before,
+.ql-snow .ql-picker.ql-size .ql-picker-label[data-value="16px"]::before {
+  content: "16px";
+}
+.ql-snow .ql-picker.ql-size .ql-picker-item[data-value="18px"]::before,
+.ql-snow .ql-picker.ql-size .ql-picker-label[data-value="18px"]::before {
+  content: "18px";
+}
+.ql-snow .ql-picker.ql-size .ql-picker-item[data-value="24px"]::before,
+.ql-snow .ql-picker.ql-size .ql-picker-label[data-value="24px"]::before {
+  content: "24px";
+}
+.ql-snow .ql-picker.ql-size .ql-picker-item[data-value="32px"]::before,
+.ql-snow .ql-picker.ql-size .ql-picker-label[data-value="32px"]::before {
+  content: "32px";
+}
+.ql-snow .ql-picker.ql-size .ql-picker-item[data-value="48px"]::before,
+.ql-snow .ql-picker.ql-size .ql-picker-label[data-value="48px"]::before {
+  content: "48px";
+}
+.ql-snow .ql-picker.ql-size .ql-picker-item[data-value="64px"]::before,
+.ql-snow .ql-picker.ql-size .ql-picker-label[data-value="64px"]::before {
+  content: "64px";
+}
+
+/* Justify & center alignment */
+.ql-align-justify {
+  text-align: justify;
+}
+.ql-align-center {
+  text-align: center;
+}
+
+/* List styles */
+.ql-editor ul {
+  list-style-type: disc !important;
+  padding-left: 1.5rem !important;
+}
+.ql-editor ol {
+  list-style-type: decimal !important;
+  padding-left: 1.5rem !important;
+}
+.ql-editor li {
+  margin-bottom: 0.5rem !important;
+}
+
+/* Clear floats */
+.ql-editor::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+/* Fix for text wrapping beside floated images */
+.ql-editor p {
+  display: block;
+  width: 100%;
+  overflow: visible !important;
+  word-wrap: break-word !important;
+  white-space: normal !important;
+}
+
+/* Floated image styles */
+.ql-editor img.float-left {
+  float: left;
+  margin: 0 1rem 1rem 0;
+  max-width: 1000px;
+}
+
+.ql-editor img.float-right {
+  float: right;
+  margin: 0 0 1rem 1rem;
+  max-width: 600px;
+}
+
+/* Base image styles */
+.ql-editor img {
+  max-width: 100%;
+  height: auto;
+  display: inline;
+  vertical-align: top;
+  object-fit: contain;
+}
+
+
