@@ -3,8 +3,8 @@
 import React, { useEffect, useRef } from "react";
 import Quill from "quill";
 import "quill/dist/quill.snow.css";
-import axios from "axios";
 import "../quill-fonts.css";
+import { supabase } from "@/lib/supabase";
 import ImageResize from "quill-image-resize-module-react";
 
 // -------------------------
@@ -62,17 +62,21 @@ export default function QuillEditor({ value, onContentChange, resetSignal }) {
                 const file = input.files[0];
                 if (!file) return;
 
-                const formData = new FormData();
-                formData.append("file", file);
-                formData.append("upload_preset", "Hello_12"); // Replace with your Cloudinary preset
-
                 try {
-                  const res = await axios.post(
-                    "https://api.cloudinary.com/v1_1/djwqli3w2/image/upload",
-                    formData
-                  );
+                  const fileExt = file.name.split(".").pop();
+                  const fileName = `${Date.now()}.${fileExt}`;
 
-                  const imageUrl = res.data.secure_url;
+                  const { error: uploadError } = await supabase.storage
+                    .from("blog-images")
+                    .upload(fileName, file);
+
+                  if (uploadError) throw uploadError;
+
+                  const { data: publicUrlData } = supabase.storage
+                    .from("blog-images")
+                    .getPublicUrl(fileName);
+
+                  const imageUrl = publicUrlData.publicUrl;
                   const range = quillRef.current.getSelection(true);
 
                   quillRef.current.insertEmbed(range.index, "image", imageUrl);
